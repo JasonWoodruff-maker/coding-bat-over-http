@@ -17,8 +17,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from app.views import nearhundred
+from app.views import near_hundred, string_splosion, cat_dog, logic_2
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("warmup-1/near-hundred/<int:x>", nearhundred)
+    path("warmup-1/near-hundred/<int:x>", near_hundred),
+    path("warmup-2/string-splosion/<str:word>/", string_splosion),
+    path("String-2/cat-dog/<str:dog>/", cat_dog),
+    path("logic-2/lone-sum/<a>/<b>/<c>/", logic_2)
 ]
